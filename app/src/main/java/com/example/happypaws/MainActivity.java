@@ -1,7 +1,9 @@
 package com.example.happypaws;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
 
         db.execSQL("CREATE TABLE IF NOT EXISTS Events ( id_Events INTEGER PRIMARY KEY AUTOINCREMENT, Date DATE NOT NULL, text TEXT, is_done BOOLEAN DEFAULT 0)");
 
+    }
 
+    public void goMapBtn(View view){
+        Intent intent = new Intent(this,GoogleMapActivity.class);
+        startActivity(intent);
     }
 }
