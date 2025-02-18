@@ -44,9 +44,9 @@ public class GoogleMapActivity extends AppCompatActivity implements OnMapReadyCa
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Добавление маркера в Сиднее, Австралия, и перемещение камеры
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 12));
+        // Добавление маркера в Almaty, KZ, и перемещение камеры
+        LatLng almaty = new LatLng(43, 77);
+        mMap.addMarker(new MarkerOptions().position(almaty).title("Marker in Almaty"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(almaty, 12));
     }
 }
