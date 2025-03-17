@@ -1,6 +1,7 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application") version "8.7.0"
 }
+
 
 android {
     namespace = "com.example.happypaws"
