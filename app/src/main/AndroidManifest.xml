@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -6,6 +7,11 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
     <uses-permission android:name="android.permission.READ_CALENDAR" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+
 
     <application
         android:allowBackup="true"
@@ -18,6 +24,20 @@
         android:theme="@style/Theme.HappyPaws"
         tools:targetApi="31">
 
+        <!-- Регистрация питомца -->
+<!--        <activity-->
+<!--            android:name=".RegisterPetActivity" android:exported="false" />-->
+
+        <!-- Остальные активности -->
+        <activity android:name=".RegisterAnimalActivity" android:exported="false" />
+        <activity android:name=".RegisterAnimal" android:exported="false" />
+        <activity android:name=".PetRulesActivity" android:exported="false" />
+
+        <activity android:name=".MedicalBookActivity" android:exported="false" />
+        <activity android:name=".PetRules" android:exported="false" />
+        <activity android:name=".Vaccination" android:exported="false" />
+        <activity android:name=".MedicalBook" android:exported="false" />
+
         <!-- App ID -->
         <meta-data
             android:name="com.google.android.gms.auth.api.credentials.APP_ID"
@@ -28,25 +48,19 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBTXuoccvYCVbkIwVgFUyFMe-gPBufUL3I" />
 
-        <!-- Активности -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GoogleMapActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+        <!-- Основные активности -->
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".GoogleMapActivity" android:exported="false" />
+        <activity android:name=".CalendarActivity" android:exported="false" />
+
+        <!-- Главное меню (стартовый экран) -->
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalendarActivity" />
 
     </application>
 </manifest>

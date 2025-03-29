@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- EditText для ввода болезни -->
+    <EditText
+        android:id="@+id/editTextDisease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите болезнь"
+        android:inputType="text" />
+
+    <!-- EditText для ввода даты -->
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите дату"
+        android:inputType="date" />
+
+    <!-- EditText для ввода рецепта -->
+    <EditText
+        android:id="@+id/editTextRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите рецепт"
+        android:inputType="text" />
+
+    <!-- Кнопка для добавления записи -->
+    <Button
+        android:id="@+id/buttonAddNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить" />
+
+    <!-- TableLayout для отображения записей -->
+    <TableLayout
+        android:id="@+id/tableMedicalNotes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:stretchColumns="1"
+        android:paddingTop="16dp">
+
+        <TableRow>
+            <!-- Заголовки для каждого столбца -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Болезнь"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Дата"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Рецепт"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Динамически добавляемые строки таблицы будут вставляться сюда -->
+
+    </TableLayout>
+
+</LinearLayout>
