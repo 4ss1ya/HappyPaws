@@ -8,7 +8,7 @@ import android.util.Log;
 public class BookDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "books_and_medical.db"; // Объединенная БД
-    private static final int DATABASE_VERSION = 3;  // Увеличиваем версию базы данных
+    private static final int DATABASE_VERSION = 4;  // Увеличиваем версию базы данных
 
     public BookDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -42,6 +42,7 @@ public class BookDatabaseHelper extends SQLiteOpenHelper {
                     "procedure_type TEXT NOT NULL, " +
                     "description TEXT, " +
                     "date TEXT, " +
+                    "vaccine TEXT, " +  // Новый столбец для вакцины
                     "FOREIGN KEY(animal_id) REFERENCES Animals(animal_id) ON DELETE CASCADE);";
             db.execSQL(createMedicalRecordsTable);
 
@@ -52,19 +53,10 @@ public class BookDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if (oldVersion < 3) {
-            // Проводим необходимые миграции, например, добавляем новые столбцы или таблицы
+        if (oldVersion < 4) {
+            // Добавляем новый столбец vaccine в таблицу MedicalRecords
             try {
-                // Пример миграции: добавляем новый столбец в таблицу Animals (если необходимо)
-                db.execSQL("ALTER TABLE Animals ADD COLUMN new_column_name TEXT;");
-
-                // Удаляем старые таблицы, если это необходимо
-                db.execSQL("DROP TABLE IF EXISTS MedicalRecords");
-                db.execSQL("DROP TABLE IF EXISTS Books");
-                db.execSQL("DROP TABLE IF EXISTS Animals");
-
-                // Пересоздаем все таблицы
-                onCreate(db);
+                db.execSQL("ALTER TABLE MedicalRecords ADD COLUMN vaccine TEXT;");
             } catch (Exception e) {
                 Log.e("DatabaseError", "Error during onUpgrade", e);
             }

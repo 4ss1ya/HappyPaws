@@ -10,7 +10,7 @@
         android:id="@+id/editTextDisease"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введите болезнь"
+        android:hint="@string/enter_disease"
         android:inputType="text" />
 
     <!-- EditText для ввода даты -->
@@ -18,7 +18,7 @@
         android:id="@+id/editTextDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введите дату"
+        android:hint="@string/enter_date"
         android:inputType="date" />
 
     <!-- EditText для ввода рецепта -->
@@ -26,7 +26,15 @@
         android:id="@+id/editTextRecipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введите рецепт"
+        android:hint="@string/enter_recipe"
+        android:inputType="text" />
+
+    <!-- EditText для ввода вакцины -->
+    <EditText
+        android:id="@+id/editTextVaccine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_vaccine"
         android:inputType="text" />
 
     <!-- Кнопка для добавления записи -->
@@ -34,7 +42,7 @@
         android:id="@+id/buttonAddNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Добавить" />
+        android:text="@string/add_note" />
 
     <!-- TableLayout для отображения записей -->
     <TableLayout
@@ -51,19 +59,25 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Болезнь"
+                android:text="@string/disease"
                 android:padding="8dp" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Дата"
+                android:text="@string/date"
                 android:padding="8dp" />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Рецепт"
+                android:text="@string/recipe"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/vaccine"
                 android:padding="8dp" />
         </TableRow>
 

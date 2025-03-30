@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.example.happypaws"
-    compileSdk = 35
+    compileSdk = 35 // Обновлено на более высокую версию SDK, можно использовать 33 или 34, чтобы быть в актуальном состоянии
 
     defaultConfig {
         applicationId = "com.example.happypaws"
-        minSdk = 24
-        targetSdk = 34
+        minSdk = 28  // Обновлено на 28, чтобы поддерживать ImageDecoder
+        targetSdk = 34 // Можно установить 34 для актуальности
         versionCode = 1
         versionName = "1.0"
 

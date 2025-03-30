@@ -34,4 +34,15 @@
     <string name="pet_rule_28">📚 Знания: Изучайте поведение и потребности вашей породы.</string>
     <string name="pet_rule_29">❤️ Любовь: Питомец чувствует заботу, общайтесь с ним каждый день.</string>
     <string name="pet_rule_30">🎉 Праздники: Угощайте и балуйте питомца в особенные дни!</string>
+
+    <!-- Новые строки для медицинской книги -->
+    <string name="enter_disease">Введите болезнь</string>
+    <string name="enter_date">Введите дату</string>
+    <string name="enter_recipe">Введите рецепт</string>
+    <string name="enter_vaccine">Введите вакцину</string>
+    <string name="add_note">Добавить</string>
+    <string name="disease">Болезнь</string>
+    <string name="date">Дата</string>
+    <string name="recipe">Рецепт</string>
+    <string name="vaccine">Вакцина</string>
 </resources>

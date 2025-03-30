@@ -1,17 +1,22 @@
 package com.example.happypaws;
 
 public class Book {
-    private String text;
+    private String title;
+    private String description;
 
-    public Book(String text) {
-        this.text = text;
+    // Конструктор класса
+    public Book(String title, String description) {
+        this.title = title;
+        this.description = description;
     }
 
-    public String getText() {
-        return text;
+    // Геттер для названия книги
+    public String getTitle() {
+        return title;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    // Геттер для описания книги (если необходимо)
+    public String getDescription() {
+        return description;
     }
 }

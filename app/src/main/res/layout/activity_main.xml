@@ -91,7 +91,7 @@
         android:id="@+id/mapBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Map with location"
+        android:text="Карта"
         android:onClick="goMapBtn" />
 
     <Button
